@@ -8,7 +8,10 @@ function Navbar() {
 
   return (
     <div className={styles.container}>
-      <a target="_blank" href={"https://github.com/amandal97/pizza-delivery"}>
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href={"https://github.com/amandal97/pizza-delivery"}>
         <div className={styles.item}>
           <div className={styles.callButton}>
             <Image src="/img/github.png" alt="" width="39" height="39" />
