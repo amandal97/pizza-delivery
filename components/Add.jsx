@@ -44,7 +44,7 @@ function Add({ setModal }) {
         extraOptions,
         img: url,
       };
-      await axios.post("http://localhost:3000/api/products", newProduct);
+      await axios.post("/api/products", newProduct);
       setModal(false);
     } catch (err) {
       console.error(err);

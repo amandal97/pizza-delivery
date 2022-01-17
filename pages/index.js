@@ -9,7 +9,6 @@ import styles from "../styles/Home.module.css";
 
 export default function Home({ pizzaList, admin }) {
   const [modal, setModal] = React.useState(false);
-  console.log("Add modal", modal);
   return (
     <div>
       <Head>
@@ -32,7 +31,7 @@ export const getServerSideProps = async (context) => {
     admin = true;
   }
 
-  const res = await axios.get("http://localhost:3000/api/products");
+  const res = await axios.get(`${process.env.BASE_URL}/api/products`);
   return {
     props: {
       pizzaList: res.data,

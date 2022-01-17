@@ -17,8 +17,6 @@ function Featured() {
     else setIndex(index === images.length - 1 ? 0 : index + 1);
   };
 
-  console.log("arrow", index);
-
   return (
     <div className={styles.container}>
       <div
