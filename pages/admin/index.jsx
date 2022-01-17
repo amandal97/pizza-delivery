@@ -63,7 +63,7 @@ function Admin({ orders, products }) {
                 </td>
                 <td>{product._id.slice(0, 5)}...</td>
                 <td>{product.title}</td>
-                <td>${product.prices[0]}</td>
+                <td>₹{product.prices[0]}</td>
                 <td>
                   <button className={styles.button}>Edit</button>
                   <button
@@ -95,7 +95,7 @@ function Admin({ orders, products }) {
               <tr className={styles.trTitle}>
                 <td>{order._id.slice(0, 5)}...</td>
                 <td>{order.customer}</td>
-                <td>${order.total}</td>
+                <td>₹{order.total}</td>
                 <td>
                   {order.method === 0 ? <span>cash</span> : <span>paid</span>}
                 </td>
@@ -114,7 +114,18 @@ function Admin({ orders, products }) {
   );
 }
 
-export const getServerSideProps = async () => {
+export const getServerSideProps = async (context) => {
+  const myCookie = context.req?.cookies || "";
+
+  if (myCookie.token !== process.env.TOKEN) {
+    return {
+      redirect: {
+        destination: "/admin/login",
+        permanent: false,
+      },
+    };
+  }
+
   const productRes = await axios.get("http://localhost:3000/api/products");
   const orderRes = await axios.get("http://localhost:3000/api/orders");
 

@@ -45,7 +45,7 @@ function Cart() {
                 <td>
                   <div className={styles.imgContainer}>
                     <Image
-                      src="/img/pizza.png"
+                      src={product.img}
                       alt=""
                       layout="fill"
                       objectFit="cover"
@@ -63,14 +63,14 @@ function Cart() {
                   </span>
                 </td>
                 <td>
-                  <span className={styles.price}>${product.totalPrice}</span>
+                  <span className={styles.price}>₹{product.totalPrice}</span>
                 </td>
                 <td>
                   <span className={styles.quantity}>{product.quantity}</span>
                 </td>
                 <td>
                   <span className={styles.total}>
-                    ${product.totalPrice * product.quantity}
+                    ₹{product.totalPrice * product.quantity}
                   </span>
                 </td>
               </tr>
@@ -82,13 +82,13 @@ function Cart() {
         <div className={styles.wrapper}>
           <h2 className={styles.title}>CART TOTAL</h2>
           <div className={styles.totalText}>
-            <b className={styles.totalTextTitle}>Subtotal:</b>${cart.total}
+            <b className={styles.totalTextTitle}>Subtotal:</b>₹{cart.total}
           </div>
           <div className={styles.totalText}>
-            <b className={styles.totalTextTitle}>Discount:</b>$0.00
+            <b className={styles.totalTextTitle}>Discount:</b>₹0.00
           </div>
           <div className={styles.totalText}>
-            <b className={styles.totalTextTitle}>Total:</b>${cart.total}
+            <b className={styles.totalTextTitle}>Total:</b>₹{cart.total}
           </div>
           {open ? (
             <div className={styles.paymentMethods}>

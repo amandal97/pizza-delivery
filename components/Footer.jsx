@@ -16,24 +16,14 @@ function Footer() {
         <div className={styles.card}>
           <h1 className={styles.title}>FIND OUR RESTAURANTS</h1>
           <p className={styles.text}>
-            17L, Jadavpur East Road #304.
+            17L, Jadavpur East Road.
             <br /> Kolkata, 700032
             <br /> 7001133216
           </p>
           <p className={styles.text}>
-            17L, Jadavpur East Road #304.
+            18/1, Jadavpur East Road.
             <br /> Kolkata, 700032
-            <br /> 7001133216
-          </p>
-          <p className={styles.text}>
-            17L, Jadavpur East Road #304.
-            <br /> Kolkata, 700032
-            <br /> 7001133216
-          </p>
-          <p className={styles.text}>
-            17L, Jadavpur East Road #304.
-            <br /> Kolkata, 700032
-            <br /> 7001133216
+            <br /> 9748644640
           </p>
         </div>
         <div className={styles.card}>

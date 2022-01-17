@@ -8,15 +8,17 @@ function Navbar() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.item}>
-        <div className={styles.callButton}>
-          <Image src="/img/telephone.png" alt="" width="32" height="32" />
+      <a target="_blank" href={"https://github.com/amandal97/pizza-delivery"}>
+        <div className={styles.item}>
+          <div className={styles.callButton}>
+            <Image src="/img/github.png" alt="" width="39" height="39" />
+          </div>
+          <div className={styles.texts}>
+            <div className={styles.text}>CHECK NOW!</div>
+            <div className={styles.text}>7001133216</div>
+          </div>
         </div>
-        <div className={styles.texts}>
-          <div className={styles.text}>ORDER NOW!</div>
-          <div className={styles.text}>7001133216</div>
-        </div>
-      </div>
+      </a>
       <div className={styles.item}>
         <ul className={styles.list}>
           <Link href="/" passHref>
@@ -24,8 +26,10 @@ function Navbar() {
           </Link>
           <li className={styles.listItem}>Products</li>
           <li className={styles.listItem}>Menu</li>
-          <Image src="/img/logo.png" alt="" width="160px" height="69px" />
-          <li className={styles.listItem}>Events</li>
+          <Image src="/img/logo1.png" alt="" width="80px" height="69px" />
+          <Link href="/admin" passHref>
+            <li className={styles.listItem}>Admin</li>
+          </Link>
           <li className={styles.listItem}>Blog</li>
           <li className={styles.listItem}>Contact</li>
         </ul>
